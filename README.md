@@ -23,6 +23,28 @@ The following libraries are needed to successfully build the library:
 - [OpenCVBlobsLib](https://github.com/OpenCVBlobsLib/opencvblobslib)
 - [CGAL](https://www.cgal.org/) (probably needs an old release from 2011)
 
+
+
+_ _ _
+
+
+
+### Testing framework
+All applications can be build using qmake, analogous to the build instructions given for WeGA.
+
+#### CalibrationTest 
+This application allows to define two test patterns that are used for calibration of the system (training data) and for testing its performance (evaluation data). The program consists of a graphical user interface for entering the probands data (like name, distance to monitor, etc.) and shows the test patterns on a full-screen window afterwards. During this process, the eye movement of the user is recorded to a video file. Additionally, a file is created that contains information about the screen-coordinates the user should have been looked at for the specific frames of the video file.
+
+#### AlgorithmTest
+The algorithm test consists of two separate programs. The programs implement either the fixed-head case or the head position invariant case of the tracking procedure. By setting various command-line arguments when executing the programs, different video resolutions, algorithm combinations and other parameters can be specified. Given these arguments and the output files of the CalibrationTest application, the programs process the video files and return the tracking results for each frame.
+
+#### MappingTest
+The tracking results are processed by two programs that implement the mapping techniques for the fixed-head and the invariant case. In combination with the data given by the calibration procedure, the error vectors between the estimated gaze-position and the position where the user did look to are returned. The behaviour of the algorithms can be specified by using command-line arguments.
+
+_ _ _
+
+
+
 ### User interfaces
 All applications can be build using qmake, analogous to the build instructions given for WeGA.
 
