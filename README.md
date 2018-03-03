@@ -1,7 +1,14 @@
 # Diploma thesis "Head Position Invariant Gaze Tracking"
+This is my diploma thesis (master thesis equivalent) project on building a low-cost gaze tracker that is able to track the user's eye movement and map it to absolute screen coordinates. In order to allow a certain degree of head movement, a total of four infrared markers are attached to the screen and their reflections on the user's eyeball are used to compensate for head movement. The mapping procedure is done by using a network of RBF neurons that needs to be trained beforehand. The thesis includes instructions on how to build the mechanical parts as well.
+
+*Please note that this project is not maintained anymore and serves reference purposes only.*
+Building the WeGA library and the various example applications may be cumbersome, since they depend on pretty old versions of libraries such as OpenCV and CGAL dating back to 2013 and are missing a common build script.
+
+![Tracking example](images/reflectionvectors.jpg)
 
 ## Abstract
 This thesis presents the conception and implementation of a low-cost gaze tracker, i. e. a device that allows to track one users eye movement and map the actual point of gaze to screen coordinates. Within this work, the construction of a head-mounted hardware device as well as various algorithms for the tracking- and mapping procedure are discussed and several improvements to existing approaches are presented. The mapping procedure uses a novel approach utilizing so called radial-basis functions for an interpolation task. In order to allow natural head movement, this approach is extended to generic function approximation in higher dimensional spaces. By adding external markers that cause reflections on the users cornea, the system is able to compensate for head movement while reaching interactive frame rates at any time.
+
 
 ## Included software
 A more detailed description on each application included in this repository is given in the thesis document, section 4.2, Pages 78-87.
@@ -58,3 +65,7 @@ This program runs as a background daemon on the user's system. Each time the use
 
 #### LiveDemonstration
 This application acts as a short demonstration of the fixed-head tracking algorithms. At first it shows 9 calibration points arranged in a 3 × 3 pattern. Afterwards, a picture is shown and a red spot follows the user's fixation point interactively.
+
+- - -
+
+![Tracking example](images/prototype_second.jpg)
