@@ -1,5 +1,7 @@
 # Diploma thesis "Head Position Invariant Gaze Tracking"
 
+## Abstract
+This thesis presents the conception and implementation of a low-cost gaze tracker, i. e. a device that allows to track one users eye movement and map the actual point of gaze to screen coordinates. Within this work, the construction of a head-mounted hardware device as well as various algorithms for the tracking- and mapping procedure are discussed and several improvements to existing approaches are presented. The mapping procedure uses a novel approach utilizing so called radial-basis functions for an interpolation task. In order to allow natural head movement, this approach is extended to generic function approximation in higher dimensional spaces. By adding external markers that cause reflections on the users cornea, the system is able to compensate for head movement while reaching interactive frame rates at any time.
 
 ## Included software
 A more detailed description on each application included in this repository is given in the thesis document, section 4.2, Pages 78-87.
@@ -8,7 +10,7 @@ A more detailed description on each application included in this repository is g
 This is the core library all subsequent applications build upon.
 
 ##### Building WeGA
-libWeGA uses the qmake Buidsystem and can be build using the following commands:
+libWeGA uses the qmake buildsystem and can be build using the following commands:
 ```shell
 mkdir libWeGA-build
 cd libWeGA-build
@@ -16,7 +18,7 @@ qmake ../WeGA
 make && make install
 ```
 
-The following libraries are needed to successfully build the library:
+This software depends on the following libraries:
 - Qt
 - [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page)
 - [OpenCV 2.4](https://opencv.org/opencv-2-4-8.html)
