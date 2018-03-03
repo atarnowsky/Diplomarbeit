@@ -2,7 +2,8 @@
 This is my diploma thesis (master thesis equivalent) project on building a low-cost gaze tracker that is able to track the user's eye movement and map it to absolute screen coordinates. In order to allow a certain degree of head movement, a total of four infrared markers are attached to the screen and their reflections on the user's eyeball are used to compensate for head movement. The mapping procedure is done by using a network of RBF neurons that needs to be trained beforehand. The thesis includes instructions on how to build the mechanical parts as well.
 
 *Please note that this project is not maintained anymore and serves reference purposes only.*
-Building the WeGA library and the various example applications may be cumbersome, since they depend on pretty old versions of libraries such as OpenCV and CGAL dating back to 2013 and are missing a common build script.
+
+Building the WeGA library and the various example applications may be cumbersome, since they depend on pretty old versions of libraries such as OpenCV and CGAL dating back to 2011 and are missing a common build script.
 
 ![Tracking example](images/reflectionvectors.jpg)
 
